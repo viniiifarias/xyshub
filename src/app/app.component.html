@@ -1,0 +1,12 @@
+<nav class="navbar navbar-toggleable-md navbar-inverse bg-primary">
+  <div class="container-fluid">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item" *ngFor="let menu of menuList">
+          <a (click)="activeMenu(menu.route)" [ngClass]="{'active': menu.route == activeRouteName}" class="nav-link" [routerLink]="menu.route">{{menu.name}}</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>
+
