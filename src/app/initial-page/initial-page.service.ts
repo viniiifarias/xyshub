@@ -6,14 +6,14 @@ import {GitHubApi} from "../githupapi.service";
 
 @Injectable()
 export class InitialPageService {
-  idBoard = 93065748
-  constructor(private http: HttpClient, private githupApi: GitHubApi) {
+  idBoard = 93065748;
+  constructor(private zenhubAPI: HttpClient, private githupApi: GitHubApi) {
 
   }
 
   pesquisarCards(nome: string) : Observable<Response>{
     const url = 'https://api.zenhub.io/p1/repositories/' + this.idBoard + '/board';
-    return this.http.get(url);
+    return this.zenhubAPI.get(url);
   }
 
   pesquisarCardsGit(nome: string) : Observable<Response>{
