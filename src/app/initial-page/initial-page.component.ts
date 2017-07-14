@@ -15,6 +15,9 @@ export class InitialPageComponent implements OnInit {
     this.initialPageService.pesquisarCards('').subscribe((response: Response) => {
       this.boardInformations = response.json().pipelines;
     });
+    this.initialPageService.pesquisarCardsGit('').subscribe((response: Response) => {
+      console.log(response);
+    });
   }
 
 }

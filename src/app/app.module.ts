@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import {InitialPageModule} from "./initial-page/initial-page.module";
 import {AppRoutingModule} from "./app-routing-module";
 import {HttpClient} from "./http-api.service";
+import {GitHubApi} from "./githupapi.service";
 
 @NgModule({
   declarations: [
@@ -15,7 +16,7 @@ import {HttpClient} from "./http-api.service";
     InitialPageModule,
     AppRoutingModule
   ],
-  providers: [HttpClient],
+  providers: [HttpClient, GitHubApi],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
